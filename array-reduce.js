@@ -6,7 +6,8 @@
 
 // Please solve it without using the built-in Array.reduce method.
 
-
+let arr=[]
+console.log(arr.length);
 
 
 
