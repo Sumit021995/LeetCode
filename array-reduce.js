@@ -6,8 +6,34 @@
 
 // Please solve it without using the built-in Array.reduce method.
 
-let arr=[]
-console.log(arr.length);
+let nums2 = []
+let fn2 = function sum(accum, curr) { return 0; }
+let init2 = 25
+
+let nums1 = [1,2,3,4]
+let fn1 = function sum(accum, curr) { return accum + curr * curr; }
+let init1 = 100
+
+
+let nums = [1,2,3,4]
+let fn = function sum(accum, curr) { return accum + curr; }
+let init = 0
+
+var reduce = function(nums, fn, init) {
+    let a = init;
+    if(nums.length === 0){
+            return a;
+    }else{
+        for(let i=0; i<nums.length; i++){
+         init = fn(init,nums[i])     
+    }
+    return init;
+    }    
+};
+
+console.log(reduce(nums, fn, init)); // 10
+console.log(reduce(nums1, fn1, init1));// 130
+console.log(reduce(nums2, fn2, init2)); // 25
 
 
 
@@ -27,9 +53,6 @@ console.log(arr.length);
 
 
 // Input: 
-// nums = [1,2,3,4]
-// fn = function sum(accum, curr) { return accum + curr; }
-// init = 0
 // Output: 10
 // Explanation:
 // initially, the value is init=0.
@@ -41,9 +64,7 @@ console.log(arr.length);
 // Example 2:
 
 // Input: 
-// nums = [1,2,3,4]
-// fn = function sum(accum, curr) { return accum + curr * curr; }
-// init = 100
+
 // Output: 130
 // Explanation:
 // initially, the value is init=100.
@@ -55,9 +76,7 @@ console.log(arr.length);
 // Example 3:
 
 // Input: 
-// nums = []
-// fn = function sum(accum, curr) { return 0; }
-// init = 25
+
 // Output: 25
 // Explanation: For empty arrays, the answer is always init.
 
