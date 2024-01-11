@@ -25,11 +25,13 @@ let k = 3
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var rotate = function(nums, k) {
+    let n = nums.length;
    if(!nums.length){
     return;
    }
-   nums.splice
-   console.log(nums);
+   const r= nums.splice(-k)
+   nums.unshift(r)
+   console.log(nums); // [1,2,3,4]
     
 
 };
