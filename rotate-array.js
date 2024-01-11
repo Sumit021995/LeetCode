@@ -30,7 +30,8 @@ var rotate = function(nums, k) {
     return;
    }
    const r= nums.splice(-k)
-   nums.unshift(r)
+   console.log(r);
+   nums.unshift(...r)
    console.log(nums); // [1,2,3,4]
     
 
