@@ -18,6 +18,8 @@
 
 let nums = [1,2,3,4,5,6,7] 
 let k = 3
+let nums1 = [1,2] 
+let k1 = 3
 
 /**
  * @param {number[]} nums
@@ -29,13 +31,17 @@ var rotate = function(nums, k) {
    if(!nums.length){
     return;
    }
+   k=k%nums.length
+   console.log(k);
    const r= nums.splice(-k)
    console.log(r);
    nums.unshift(...r)
    console.log(nums); // [1,2,3,4]
+   return nums;
     
 
 };
 
 console.log(rotate(nums,k));
+console.log(rotate(nums1,k1));
  
