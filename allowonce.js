@@ -6,3 +6,8 @@ Every subsequent time it is called, it should return undefined.
  
  */
 
+// do while loop syntex
+// do {
+    
+// } while (condition);
+
